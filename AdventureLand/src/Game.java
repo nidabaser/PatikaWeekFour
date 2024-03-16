@@ -61,6 +61,26 @@ public class Game {
                     System.out.println("Please enter valid location!");
                     break;
             }
+
+            if (selectLoc == 3 && new Cave(player).getPlayer().getInventory().isFood()){
+                System.out.println("This Zone completed.");
+                continue;
+            }
+
+            if (selectLoc == 4 && new Forest(player).getPlayer().getInventory().isFirewood()){
+                System.out.println("This Zone completed.");
+                continue;
+            }
+
+            if (selectLoc == 5 && new River(player).getPlayer().getInventory().isWater()){
+                System.out.println("This Zone completed.");
+                continue;
+            }
+
+            if (new SafeHouse(player).finish()){
+                break;
+            }
+
             if (locations == null){
                 System.out.println("*****************\nGOODBYE FOR NOW\n*****************");
                 break;

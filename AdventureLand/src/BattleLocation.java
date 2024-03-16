@@ -45,8 +45,9 @@ public abstract class BattleLocation extends Location {
 
     public boolean combat(int enemyNumber) {
 
-        this.getEnemy().setEnemyHealth(this.getEnemy().getOriginalHealth());
+
         for (int i = 1; i <= enemyNumber; i++) {
+            this.getEnemy().setEnemyHealth(this.getEnemy().getOriginalHealth());
             playerStats();
             enemyStats(i);
 
@@ -71,7 +72,7 @@ public abstract class BattleLocation extends Location {
                             this.getPlayer().setHealth(this.getPlayer().getHealth() - enemyDamage);
                             afterHit();
                         } else {
-                            return false;
+                            return true;
                         }
                     } else {
                         System.out.println("\nEnemy hits you !");

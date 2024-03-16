@@ -12,5 +12,21 @@ public class SafeHouse extends NormalLocation {
         this.getPlayer().setHealth(this.getPlayer().getOriginalHealth());
         return true;
     }
+    public boolean finish(){
+        if (this.getPlayer().getInventory().isFood() && this.getPlayer().getInventory().isWater() && this.getPlayer().getInventory().isFirewood()){
+            System.out.println("\n" +
+                    "         _________ _        _        _______  _______ \n" +
+                    "|\\     /|\\__   __/( (    /|( (    /|(  ____ \\(  ____ )\n" +
+                    "| )   ( |   ) (   |  \\  ( ||  \\  ( || (    \\/| (    )|\n" +
+                    "| | _ | |   | |   |   \\ | ||   \\ | || (__    | (____)|\n" +
+                    "| |( )| |   | |   | (\\ \\) || (\\ \\) ||  __)   |     __)\n" +
+                    "| || || |   | |   | | \\   || | \\   || (      | (\\ (   \n" +
+                    "| () () |___) (___| )  \\  || )  \\  || (____/\\| ) \\ \\__\n" +
+                    "(_______)\\_______/|/    )_)|/    )_)(_______/|/   \\__/\n" +
+                    "                                                      \n");
+            return true;
+        }
+        return false;
+    }
 
 }

@@ -37,6 +37,9 @@ public class Inventory {
     public Inventory (){
         this.weapon = new Weapon("Fists", -1,0,0);
         this.armor = new Armor(-1, "Basic Tunic",0,0);
+        this.water = false;
+        this.food = false;
+        this.firewood = false;
     }
 
     public Weapon getWeapon() {
